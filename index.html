@@ -21,7 +21,7 @@
       </h3>
       Todos os pratos acompanham arroz, feijão e a sobremesa do dia.
       <div class="Joga-de-Ladinho">
-        <div class="Pratos" id="bife">
+        <div class="Pratos">
           <div>
             <img src="img/bife.jpg" alt="" width="100%">
             <h5>
@@ -30,7 +30,7 @@
             <p>R$ 30,00</p>
             <div class="quantity buttons_added">
               <input type="button" value="-" class="minus">
-              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+              <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
                   class="input-text qty text" size="4" pattern="" inputmode="">
               <input type="button" value="+" class="plus">
             </div>
@@ -49,14 +49,14 @@
             </div>
           </div>
         </div>
-        <div class="Pratos" id="panela">
+        <div class="Pratos">
           <div>
             <img src="img/panela.jpg" alt="" width="100%">
             <h5>Carne de Panela</h5>
             <p>R$ 22,00</p>
             <div class="quantity buttons_added">
               <input type="button" value="-" class="minus">
-              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+              <input type="number" step="1" min="0" max="" id="3" name="quantity" value="0" title="Qty"
                   class="input-text qty text" size="4" pattern="" inputmode="">
               <input type="button" value="+" class="plus">
             </div>
@@ -70,7 +70,7 @@
       </h3>
       Porções para uma pessoa.
       <div class="Joga-de-Ladinho">
-        <div class="Pratos" id="farofa">
+        <div class="Pratos">
           <div>
             <img src="img/farofa.jpg" alt="" width="100%">
             <h5>
@@ -79,34 +79,33 @@
             <p>R$ 10,00</p>
             <div class="quantity buttons_added">
               <input type="button" value="-" class="minus">
-              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+              <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
                   class="input-text qty text" size="4" pattern="" inputmode="">
               <input type="button" value="+" class="plus">
             </div>
           </div>
         </div>
-        <div class="Pratos" id="salada">
+        <div class="Pratos">
           <div>
             <img src="img/salad.jpg" alt="" width="100%">
             <h5>Salada</h5>
             <p>R$ 8,00</p>
             <div class="quantity buttons_added">
               <input type="button" value="-" class="minus">
-              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
-                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="number" step="1" min="0" max="" id="5" name="quantity" value="0" title="Qty"
+              class="input-text qty text" size="4" pattern="" inputmode="">
               <input type="button" value="+" class="plus">
             </div>
           </div>
         </div>
-        <div class="Pratos" id="torresmo">
+        <div class="Pratos">
           <div>
             <img src="img/torresmo.jpg" alt="" width="100%">
             <h5> Torresmo</h5>
             <p>R$ 12,00</p>
             <div class="quantity buttons_added">
               <input type="button" value="-" class="minus">
-              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
-                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="number" step="1" min="0" max="" id="6" name="quantity" value="0" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
               <input type="button" value="+" class="plus">
             </div>
           </div>
@@ -118,20 +117,27 @@
           <h3>
               Dados Pessoais
           </h3>
-          <input class="input-cadastro"  type="text" placeholder="Digite seu nome">
-          <input class="input-cadastro" type="number" placeholder="Digite seu telefone">
+          <input class="input-cadastro"  type="text" placeholder="Digite seu nome" id="name">
+          <input class="input-cadastro" type="text" id="telefone" placeholder="Digite seu telefone"></type>
           <input class="input-cadastro" type="email" placeholder="Digite seu email">
-          <button>
+          <button onclick="calc()">
             Calcular
           </button>
+        </div>
+        <div id="output" class="output">
         </div>
       </div>
     </div>
   </div>
 
-  <script src="js/javascript.js"> </script>
+  <script src="js/jquery-3.6.0.min.js"> </script>
   <script src="js/jquery.mask.min.js"> </script>
   <script src="js/quantity.js"> </script>
+  <script src="js/javascript.js"> </script>
+
+  <script>
+    $("#telefone").mask("(99) 9999-99999");
+  </script>
 
 </body>
 </html>
