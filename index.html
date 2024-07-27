@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="menu_icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/quantidade.css">
+  <link rel="shortcut icon" href="img/menu_icon.svg" type="image/svg+xml">
   <title>Menu</title>
 </head>
 <body>
   <div class="container">
-      <img src="home.jpg" alt="" width="100%">
+    <img src="img/home.jpg" alt="" width="100%">
     <h2>
       Menu - Faça você mesmo!
     </h2>
@@ -20,19 +21,46 @@
       </h3>
       Todos os pratos acompanham arroz, feijão e a sobremesa do dia.
       <div class="Joga-de-Ladinho">
-        <div class="Pratos">
-          <img src="bife.jpg" alt="" width="100%">
-          <h5>
-            Bife com Batata
-          </h5>
+        <div class="Pratos" id="bife">
+          <div>
+            <img src="img/bife.jpg" alt="" width="100%">
+            <h5>
+              Bife com Batata
+            </h5>
+            <p>R$ 30,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
         </div>
-        <div class="Pratos">
-          <img src="coxa.jpg" alt="" width="100%">
-          <h5>Coxa de Frango Crocante</h5>
+        <div class="Pratos" id="coxa">
+          <div>
+            <img src="img/coxa.jpg" alt="" width="100%">
+            <h5>Coxa de Frango Crocante</h5>
+            <p>R$ 25,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
         </div>
-        <div class="Pratos">
-          <img src="panela.jpg" alt="" width="100%">
-          <h5>Carne de Panela</h5>
+        <div class="Pratos" id="panela">
+          <div>
+            <img src="img/panela.jpg" alt="" width="100%">
+            <h5>Carne de Panela</h5>
+            <p>R$ 22,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -42,26 +70,68 @@
       </h3>
       Porções para uma pessoa.
       <div class="Joga-de-Ladinho">
-        <div class="Pratos">
-          <img src="farofa.jpg" alt="" width="100%">
-          <h5>
-            Farofa
-          </h5>
+        <div class="Pratos" id="farofa">
+          <div>
+            <img src="img/farofa.jpg" alt="" width="100%">
+            <h5>
+              Farofa
+            </h5>
+            <p>R$ 10,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
         </div>
-        <div class="Pratos">
-          <img src="salad.jpg" alt="" width="100%">
-          <h5>Salada</h5>
+        <div class="Pratos" id="salada">
+          <div>
+            <img src="img/salad.jpg" alt="" width="100%">
+            <h5>Salada</h5>
+            <p>R$ 8,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
         </div>
-        <div class="Pratos">
-          <img src="torresmo.jpg" alt="" width="100%">
-          <h5> Torresmo</h5>
+        <div class="Pratos" id="torresmo">
+          <div>
+            <img src="img/torresmo.jpg" alt="" width="100%">
+            <h5> Torresmo</h5>
+            <p>R$ 12,00</p>
+            <div class="quantity buttons_added">
+              <input type="button" value="-" class="minus">
+              <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                  class="input-text qty text" size="4" pattern="" inputmode="">
+              <input type="button" value="+" class="plus">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="Cadastro">
-      
-    </div>
+      <div class="Cadastro">
+        <div class="flex-container">
+          <h3>
+              Dados Pessoais
+          </h3>
+          <input class="input-cadastro"  type="text" placeholder="Digite seu nome">
+          <input class="input-cadastro" type="number" placeholder="Digite seu telefone">
+          <input class="input-cadastro" type="email" placeholder="Digite seu email">
+          <button>
+            Calcular
+          </button>
+        </div>
+      </div>
     </div>
   </div>
+
+  <script src="js/javascript.js"> </script>
+  <script src="js/jquery.mask.min.js"> </script>
+  <script src="js/quantity.js"> </script>
+
 </body>
 </html>
