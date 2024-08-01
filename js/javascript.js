@@ -9,14 +9,16 @@ var prods = [
 
 function calc(){
     var quantities = document.getElementsByName("quantity");
-    var output     = document.getElementById("output");
     let name       = document.getElementById("name").value;
+    var modalbody  = document.getElementById("modalbody");
+    var modaltitulo  = document.getElementById("modaltitulo");
+    var pezinho  = document.getElementById("pezinho");
     var preco_final = 0;
     var total      = 0;
 
-    output.innerHTML = "";
-
-    output.innerHTML += `Caro, <b>${name}</b><br><br> Seguem os dados do seu pedido.<br><br> O seu pedido é: <br><br>`
+    modalbody.innerHTML = "";
+    modaltitulo.innerHTML = "";
+    pezinho.innerHTML = "";
 
     var formatter = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
@@ -29,10 +31,17 @@ function calc(){
         if(input.value > 0){
             total            = prods[id-1].price * parseFloat(input.value);
             preco_final += total;
-            output.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço: ${formatter.format(prods[id-1].price)} - Quantidade: ${input.value} - Total: ${formatter.format(total)}</li></br>`;
+            modalbody.innerHTML += `<li>Prato: ${prods[id-1].name}  - Preço: ${formatter.format(prods[id-1].price)} - Quantidade: ${input.value} - Total: ${formatter.format(total)}</li>`;
         }
     }
 
-    output.innerHTML += `<b>Preço Final: ${formatter.format(preco_final)}</b>`
+    if(preco_final > 0 && name !== ''){
+        modaltitulo.innerHTML += `Caro, <b>${name}</b>`
+        pezinho.innerHTML += `<br><h5><b>Preço Final: ${formatter.format(preco_final)}</b></h5>`
+    }else{
+        modalbody.innerHTML = "";
+        modaltitulo.innerHTML += `<h5><b>Erro</b></h5>`
+        modalbody.innerHTML += `Preencha todos os campos!`;
+    }
 }
 
